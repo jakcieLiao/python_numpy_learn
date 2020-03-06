@@ -21,12 +21,12 @@ likes_comment_data = df[["likes", "comment_count"]]
 # print(likes_comment_data)
 # 获取likes和comment的数据，且喜欢数小于10000
 likes_comment = likes_comment_data[likes_comment_data["likes"]<20000]
-print(likes_comment)
+# print(likes_comment)
 
 # 处理异常数据，如喜欢数和评论数都为0的赋值为均值
 likes_comment[likes_comment==0] = np.nan
 likes_comment = likes_comment.fillna(likes_comment.mean())
-print(likes_comment)
+# print(likes_comment)
 
 # 绘制散点图
 plt.figure(figsize=(20,8), dpi=80)
